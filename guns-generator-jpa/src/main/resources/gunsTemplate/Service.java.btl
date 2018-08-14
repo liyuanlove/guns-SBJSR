@@ -1,0 +1,14 @@
+package ${service.packageName};
+
+import com.stylefeng.guns.po.${context.poClassName};
+import com.stylefeng.guns.core.base.service.IBaseService;
+
+/**
+ * ${context.bizChName}Service
+ *
+ * @author TC
+ * @Date ${tool.currentTime()}
+ */
+public interface I${context.bizEnBigName}Service extends IBaseService<${context.poClassName},Integer> {
+
+}
