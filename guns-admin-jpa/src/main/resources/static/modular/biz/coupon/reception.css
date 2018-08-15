@@ -1,0 +1,31 @@
+.congratulate {
+    font-size: 20px;
+    color: #000000;
+}
+
+div#couponDiv {
+    width: 320px;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+img#coupon {
+    width: 70%;
+    height: 70%;
+    display: inline-block;
+}
+
+label {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.submitBtn {
+    width: 240px;
+    height: 35px;
+    margin-top: 20px;
+    background: #fe6a42;
+    color: white;
+}

@@ -1,0 +1,19 @@
+package ${service.packageName}.impl;
+
+import com.stylefeng.guns.dao.${context.bizEnBigName}Dao;
+import com.stylefeng.guns.po.${context.poClassName};
+import com.stylefeng.guns.service.I${context.bizEnBigName}Service;
+import com.stylefeng.guns.core.base.service.impl.BaseServiceImpl;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+/**
+ * ${context.bizChName}Service实现
+ *
+ * @author TC
+ * @Date ${tool.currentTime()}
+ */
+@Service
+public class ${context.bizEnBigName}ServiceImpl extends BaseServiceImpl<${context.poClassName}, Integer, ${context.bizEnBigName}Dao> implements I${context.bizEnBigName}Service {
+
+}

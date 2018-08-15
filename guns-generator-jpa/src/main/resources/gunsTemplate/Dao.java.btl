@@ -1,0 +1,16 @@
+package ${dao.packageName};
+
+import com.stylefeng.guns.po.${context.poClassName};
+import com.stylefeng.guns.core.base.dao.BaseDao;
+import org.springframework.stereotype.Repository;
+
+/**
+ * ${context.bizChName}Dao
+ *
+ * @author TC
+ * @Date ${tool.currentTime()}
+ */
+@Repository
+public interface ${context.bizEnBigName}Dao extends BaseDao<${context.poClassName}, Integer> {
+
+}

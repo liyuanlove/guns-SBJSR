@@ -1,0 +1,129 @@
+/**
+ * 初始化${context.bizChName}详情对话框
+ */
+var ${context.bizEnBigName}InfoDlg = {
+    ${context.bizEnName}InfoData : {},
+    //校验字段（根据需要剔除）
+    validateFields: {
+        <% for(item in table.fields!){ %>
+        <% if(itemLP.last != true){ %>
+            ${item.propertyName}: {
+                validators: {
+                    notEmpty: {
+                        message: '${item.comment}不能为空'
+                    }
+                }
+            },
+        <% }else{ %>
+            ${item.propertyName}: {
+                validators: {
+                    notEmpty: {
+                        message: '${item.comment}不能为空'
+                    }
+                }
+            }
+        <% }} %>
+    }
+};
+
+/**
+ * 清除字段信息
+ */
+${context.bizEnBigName}InfoDlg.clearData = function() {
+    this.${context.bizEnName}InfoData = {};
+}
+
+/**
+ * 存储对话框中的数据
+ *
+ * @param key 数据的名称
+ * @param val 数据的具体值
+ */
+${context.bizEnBigName}InfoDlg.set = function(key, val) {
+    this.${context.bizEnName}InfoData[key] = (typeof val == "undefined") ? $("#" + key).val() : val;
+    return this;
+}
+
+/**
+ * 获取对话框中的数据
+ *
+ * @param key 数据的名称
+ * @param val 数据的具体值
+ */
+${context.bizEnBigName}InfoDlg.get = function(key) {
+    return $("#" + key).val();
+}
+
+/**
+ * 关闭此对话框
+ */
+${context.bizEnBigName}InfoDlg.close = function() {
+    parent.layer.close(window.parent.${context.bizEnBigName}.layerIndex);
+}
+
+/**
+ * 收集字段信息
+ */
+${context.bizEnBigName}InfoDlg.collectData = function() {
+    this
+    <% for(item in table.fields!){ %>
+    <% if(itemLP.last != true){ %>
+    .set('${item.propertyName}')
+    <% }else{ %>
+    .set('${item.propertyName}');
+    <% }} %>
+}
+
+/**
+ * 验证数据
+ */
+CouponInfoDlg.validate = function () {
+    $('#'+"${context.bizEnBigName}InfoForm").data("bootstrapValidator").resetForm();
+    $('#'+"${context.bizEnBigName}InfoForm").bootstrapValidator('validate');
+    return $("#"+"${context.bizEnBigName}InfoForm").data('bootstrapValidator').isValid();
+};
+
+/**
+ * 提交添加
+ */
+${context.bizEnBigName}InfoDlg.addSubmit = function() {
+
+    this.clearData();
+    this.collectData();
+
+    //提交信息
+    var ajax = new $ax(Feng.ctxPath + "/${context.bizEnName}/add", function(data){
+        Feng.success("添加成功!");
+        window.parent.${context.bizEnBigName}.table.refresh();
+        ${context.bizEnBigName}InfoDlg.close();
+    },function(data){
+        Feng.error("添加失败!" + data.responseJSON.message + "!");
+    });
+    //配置提交的数据
+    ajax.set(this.${context.bizEnName}InfoData);
+    ajax.start();
+}
+
+/**
+ * 提交修改
+ */
+${context.bizEnBigName}InfoDlg.editSubmit = function() {
+
+    this.clearData();
+    this.collectData();
+
+    //提交信息
+    var ajax = new $ax(Feng.ctxPath + "/${context.bizEnName}/edit", function(data){
+        Feng.success("修改成功!");
+        window.parent.${context.bizEnBigName}.table.refresh();
+        ${context.bizEnBigName}InfoDlg.close();
+    },function(data){
+        Feng.error("修改失败!" + data.responseJSON.message + "!");
+    });
+    ajax.set(this.${context.bizEnName}InfoData);
+    ajax.start();
+}
+
+$(function() {
+    Feng.initValidator("${context.bizEnBigName}InfoForm", ${context.bizEnBigName}InfoDlg.validateFields);
+});

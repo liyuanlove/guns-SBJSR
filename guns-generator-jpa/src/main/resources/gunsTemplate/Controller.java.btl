@@ -1,0 +1,152 @@
+package ${controller.packageName};
+
+import com.stylefeng.guns.core.base.controller.BaseController;
+import com.stylefeng.guns.core.log.LogObjectHolder;
+import com.stylefeng.guns.po.${context.poClassName};
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
+import com.stylefeng.guns.service.I${context.bizEnBigName}Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.validation.Valid;
+
+/**
+ * ${context.bizChName}控制器
+ *
+ * @author fengshuonan
+ * @Date ${tool.currentTime()}
+ */
+@Controller
+@RequestMapping("/${context.bizEnName}")
+public class ${context.bizEnBigName}Controller extends BaseController {
+
+    private String PREFIX = "/${context.moduleEnName}/${context.bizEnName}/";
+
+    @Autowired
+    private I${context.poClassName}Service ${context.bizEnName}Service;
+
+    /**
+     * ${context.bizChName}首页
+     */
+    @ApiOperation("${context.bizChName}首页")
+    @GetMapping("")
+    public String index() {
+        return PREFIX + "${context.bizEnName}.html";
+    }
+
+    /**
+     * ${context.bizChName}列表
+     */
+    @ApiOperation("${context.bizChName}列表")
+    @ApiImplicitParams({
+        @ApiImplicitParam(name = "condition", value = "搜索条件", required = true, dataType = "String")
+    })
+    @PostMapping(value = "/list")
+    @ResponseBody
+    public Object list(String condition) {
+        return ${context.bizEnName}Service.findAll();
+    }
+
+    /**
+     * 添加${context.bizChName}页面
+     */
+    @ApiOperation("添加${context.bizChName}页面")
+    @GetMapping("/${context.bizEnName}_add")
+    public String ${context.bizEnName}Add() {
+        return PREFIX + "${context.bizEnName}_add.html";
+    }
+
+    /**
+     * 新增${context.bizChName}
+     */
+    @ApiOperation("新增${context.bizChName}")
+    @ApiImplicitParams({
+       @ApiImplicitParam(name = "${context.bizEnName}", value = "要保存的实体", required = true, dataType = "${context.poClassName}")
+    })
+    @PostMapping(value = "/add")
+    @ResponseBody
+    public Object add(@Valid ${context.poClassName} ${context.bizEnName}, BindingResult bindingResult) {
+       if (bindingResult.hasErrors()) {
+           throw new GunsException(BizExceptionEnum.REQUEST_NULL);
+       }
+        ${context.bizEnName}Service.insertAllCol(${context.bizEnName});
+        return SUCCESS_TIP;
+    }
+
+    /**
+     * 修改${context.bizChName}页面
+     */
+    @ApiOperation("修改${context.bizChName}页面")
+    @ApiImplicitParams({
+        @ApiImplicitParam(name = "${context.bizEnName}Id", value = "实体ID", required = true, dataType = "Integer"),
+    })
+    @GetMapping("/${context.bizEnName}_edit/{${context.bizEnName}Id}")
+    public String ${context.bizEnName}Update(@PathVariable Integer ${context.bizEnName}Id, Model model) {
+        if (${context.bizEnName}Id == null) {
+            throw new GunsException(BizExceptionEnum.REQUEST_NULL);
+        }
+        ${context.poClassName} ${context.bizEnName} = ${context.bizEnName}Service.getOneById(${context.bizEnName}Id);
+        model.addAttribute("item",${context.bizEnName});
+        LogObjectHolder.me().setObject(${context.bizEnName});
+        return PREFIX + "${context.bizEnName}_edit.html";
+    }
+
+    /**
+     * 修改${context.bizChName}
+     */
+    @ApiOperation("修改${context.bizChName}页面")
+    @ApiImplicitParams({
+        @ApiImplicitParam(name = "${context.bizEnName}", value = "要保存的实体", required = true, dataType = "${context.poClassName}")
+    })
+    @PostMapping(value = "/edit")
+    @ResponseBody
+    public Object update(@Valid ${context.poClassName} ${context.bizEnName}, BindingResult bindingResult) {
+         if (bindingResult.hasErrors()) {
+             throw new GunsException(BizExceptionEnum.REQUEST_NULL);
+         }
+        ${context.poClassName} oldPo = ${context.bizEnName}Service.getOneById(${context.bizEnName}.getId());
+        ${context.bizEnName}Service.updateNotNullField(oldPo, ${context.bizEnName});
+        return SUCCESS_TIP;
+    }
+
+    /**
+     * 删除${context.bizChName}
+     */
+    @ApiOperation("删除${context.bizChName}")
+    @ApiImplicitParams({
+        @ApiImplicitParam(name = "${context.bizEnName}Id", value = "实体ID", required = true, dataType = "Integer")
+    })
+    @PostMapping(value = "/delete")
+    @ResponseBody
+    public Object delete(@RequestParam Integer ${context.bizEnName}Id) {
+        if (${context.bizEnName}Id == null) {
+            throw new GunsException(BizExceptionEnum.REQUEST_NULL);
+        }
+        ${context.bizEnName}Service.deleteById(${context.bizEnName}Id);
+        return SUCCESS_TIP;
+    }
+
+    /**
+     * ${context.bizChName}详情
+     */
+    @ApiOperation("${context.bizChName}详情")
+    @ApiImplicitParams({
+        @ApiImplicitParam(name = "${context.bizEnName}Id", value = "实体ID", required = true, dataType = "Integer")
+    })
+    @GetMapping(value = "/detail/{${context.bizEnName}Id}")
+    @ResponseBody
+    public Object detail(@PathVariable("${context.bizEnName}Id") Integer ${context.bizEnName}Id) {
+        if (${context.bizEnName}Id == null) {
+            throw new GunsException(BizExceptionEnum.REQUEST_NULL);
+        }
+        return ${context.bizEnName}Service.getOneById(${context.bizEnName}Id);
+    }
+}
