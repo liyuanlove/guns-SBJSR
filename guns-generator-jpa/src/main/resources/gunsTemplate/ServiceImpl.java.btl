@@ -3,7 +3,7 @@ package ${service.packageName}.impl;
 import com.stylefeng.guns.dao.${context.bizEnBigName}Dao;
 import com.stylefeng.guns.po.${context.poClassName};
 import com.stylefeng.guns.service.I${context.bizEnBigName}Service;
-import com.stylefeng.guns.core.base.service.impl.BaseServiceImpl;
+import org.tan.jpa.service.impl.BaseServiceImpl;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

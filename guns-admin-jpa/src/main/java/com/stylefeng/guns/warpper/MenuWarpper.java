@@ -1,11 +1,11 @@
 package com.stylefeng.guns.warpper;
 
-import com.stylefeng.guns.core.base.warpper.BeanWarpper;
 import com.stylefeng.guns.core.common.constant.enums.DoubleStatus;
 import com.stylefeng.guns.core.constant.IsMenu;
 import com.stylefeng.guns.po.Menu;
 import com.stylefeng.guns.vo.MenuVo;
 import org.springframework.beans.BeanUtils;
+import org.tan.jpa.warpper.BeanWarpper;
 
 /**
  * 菜单列表的包装类

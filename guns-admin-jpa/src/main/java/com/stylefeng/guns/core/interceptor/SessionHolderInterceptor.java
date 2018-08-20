@@ -1,12 +1,12 @@
 package com.stylefeng.guns.core.interceptor;
 
-import com.stylefeng.guns.core.base.controller.BaseController;
 import com.stylefeng.guns.core.util.HttpSessionHolder;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
+import org.tan.jpa.controller.BaseController;
 
 /**
  * 静态调用session的拦截器
@@ -24,7 +24,7 @@ public class SessionHolderInterceptor extends BaseController {
 
     @Around("cutService()")
     public Object sessionKit(ProceedingJoinPoint point) throws Throwable {
-        HttpSessionHolder.put(super.getHttpServletRequest().getSession());
+        HttpSessionHolder.put(super.getRequest().getSession());
         try {
             return point.proceed();
         } finally {

@@ -15,11 +15,11 @@
     <url>http://maven.apache.org</url>
 
     <dependencies>
-        <!--JPA-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <groupId>org.tan</groupId>
+            <artifactId>kit-jpa</artifactId>
         </dependency>
+
         <!--数据库连接池-->
         <dependency>
             <groupId>mysql</groupId>
@@ -30,12 +30,6 @@
             <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
 
-        <!--web-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <scope>provided</scope>
-        </dependency>
         <!--aop-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -77,16 +71,11 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
         <!--fastjson(这里未采用jackson,gson)-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
         </dependency>
-
     </dependencies>
 
     <build>

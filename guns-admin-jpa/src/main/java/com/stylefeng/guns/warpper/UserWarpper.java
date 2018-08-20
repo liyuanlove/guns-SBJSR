@@ -1,12 +1,12 @@
 package com.stylefeng.guns.warpper;
 
-import com.stylefeng.guns.core.base.warpper.BeanWarpper;
 import com.stylefeng.guns.core.common.constant.factory.ConstantFactory;
 import com.stylefeng.guns.core.common.constant.factory.IConstantFactory;
 import com.stylefeng.guns.po.User;
 import com.stylefeng.guns.vo.UserVo;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
+import org.tan.jpa.warpper.BeanWarpper;
 
 /**
  * 用户管理的包装类

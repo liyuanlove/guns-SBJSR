@@ -1,14 +1,12 @@
 package com.stylefeng.guns.modular.system.controller;
 
 
-import com.stylefeng.guns.core.base.controller.BaseController;
 import com.stylefeng.guns.core.common.annotion.BizLog;
 import com.stylefeng.guns.core.common.annotion.BizNameType;
 import com.stylefeng.guns.core.common.constant.cache.Cache;
 import com.stylefeng.guns.core.common.constant.cache.CacheKey;
 import com.stylefeng.guns.core.common.constant.factory.ConstantFactory;
 import com.stylefeng.guns.core.common.exception.BizExceptionEnum;
-import com.stylefeng.guns.core.exception.GunsException;
 import com.stylefeng.guns.core.redis.cache.RedisCacheDao;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.core.ztree.ZTreeNode;
@@ -23,6 +21,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.tan.jpa.controller.BaseController;
+import org.tan.jpa.exception.GunsException;
 
 import javax.validation.Valid;
 import java.util.List;

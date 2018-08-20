@@ -1,8 +1,5 @@
 package com.stylefeng.guns.core.config;
 
-import com.stylefeng.guns.core.base.controller.GunsErrorView;
-import com.stylefeng.guns.core.enums.GunsExceptionEnum;
-import com.stylefeng.guns.core.exception.GunsException;
 import com.stylefeng.guns.core.util.DateUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +8,9 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.support.GenericConversionService;
 import org.springframework.web.bind.support.ConfigurableWebBindingInitializer;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
+import org.tan.jpa.controller.GunsErrorView;
+import org.tan.jpa.enums.SimpleExceptionEnum;
+import org.tan.jpa.exception.GunsException;
 
 import javax.annotation.PostConstruct;
 import java.util.Date;
@@ -58,7 +58,7 @@ public class DefaultWebConfig extends DefaultFastjsonConfig {
             } else if (timeSecondsFlag) {
                 return DateUtil.parseTime(dateString);
             } else {
-                throw new GunsException(GunsExceptionEnum.INVLIDE_DATE_STRING);
+                throw new GunsException(SimpleExceptionEnum.INVLIDE_DATE_STRING);
             }
 
         }

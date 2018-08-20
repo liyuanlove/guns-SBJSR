@@ -1,12 +1,12 @@
 package com.stylefeng.guns.modular.system.controller;
 
-import com.stylefeng.guns.core.base.controller.BaseController;
 import com.stylefeng.guns.po.Notice;
 import com.stylefeng.guns.service.INoticeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.tan.jpa.controller.BaseController;
 
 import java.util.List;
 

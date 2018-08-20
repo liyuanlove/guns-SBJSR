@@ -1,8 +1,6 @@
 package com.stylefeng.guns.service.impl;
 
-import com.stylefeng.guns.core.base.service.impl.BaseServiceImpl;
 import com.stylefeng.guns.core.common.exception.BizExceptionEnum;
-import com.stylefeng.guns.core.exception.GunsException;
 import com.stylefeng.guns.core.support.BeanKit;
 import com.stylefeng.guns.core.ztree.ZTreeNode;
 import com.stylefeng.guns.dao.DeptDao;
@@ -11,6 +9,8 @@ import com.stylefeng.guns.service.IDeptService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.tan.jpa.exception.GunsException;
+import org.tan.jpa.service.impl.BaseServiceImpl;
 
 import java.util.List;
 import java.util.Map;

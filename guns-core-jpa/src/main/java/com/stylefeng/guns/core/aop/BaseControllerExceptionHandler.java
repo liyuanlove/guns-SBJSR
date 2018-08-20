@@ -1,13 +1,13 @@
 package com.stylefeng.guns.core.aop;
 
-import com.stylefeng.guns.core.base.tips.ErrorTip;
-import com.stylefeng.guns.core.enums.GunsExceptionEnum;
-import com.stylefeng.guns.core.exception.GunsException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import org.tan.jpa.enums.SimpleExceptionEnum;
+import org.tan.jpa.exception.GunsException;
+import org.tan.jpa.tips.ErrorTip;
 
 /**
  * 全局的的异常拦截器（拦截所有的控制器）（带有@RequestMapping注解的方法上都会拦截）
@@ -37,7 +37,7 @@ public class BaseControllerExceptionHandler {
     @ResponseBody
     public ErrorTip notFount(RuntimeException e) {
         log.error("运行时异常:", e);
-        return new ErrorTip(GunsExceptionEnum.SERVER_ERROR.getCode(), GunsExceptionEnum.SERVER_ERROR.getMessage());
+        return new ErrorTip(SimpleExceptionEnum.SERVER_ERROR.getCode(), SimpleExceptionEnum.SERVER_ERROR.getMessage());
     }
 
 }

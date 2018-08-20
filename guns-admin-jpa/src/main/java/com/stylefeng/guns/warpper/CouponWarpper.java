@@ -1,12 +1,12 @@
 package com.stylefeng.guns.warpper;
 
-import com.stylefeng.guns.core.base.warpper.BeanWarpper;
 import com.stylefeng.guns.core.common.constant.factory.ConstantFactory;
 import com.stylefeng.guns.po.Coupon;
 import com.stylefeng.guns.vo.CouponVo;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.beans.BeanUtils;
+import org.tan.jpa.warpper.BeanWarpper;
 
 import java.util.Calendar;
 import java.util.Date;

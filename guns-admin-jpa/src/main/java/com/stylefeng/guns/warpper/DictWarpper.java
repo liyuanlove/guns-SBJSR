@@ -1,12 +1,12 @@
 package com.stylefeng.guns.warpper;
 
-import com.stylefeng.guns.core.base.warpper.BeanWarpper;
 import com.stylefeng.guns.core.common.constant.factory.ConstantFactory;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.po.Dict;
 import com.stylefeng.guns.vo.DictVo;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.BeanUtils;
+import org.tan.jpa.warpper.BeanWarpper;
 
 import java.util.List;
 

@@ -1,11 +1,11 @@
 package com.stylefeng.guns.service.impl;
 
-import com.stylefeng.guns.core.base.service.impl.BaseServiceImpl;
 import com.stylefeng.guns.dao.NoticeDao;
 import com.stylefeng.guns.po.Notice;
 import com.stylefeng.guns.service.INoticeService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
+import org.tan.jpa.service.impl.BaseServiceImpl;
 
 import java.util.List;
 

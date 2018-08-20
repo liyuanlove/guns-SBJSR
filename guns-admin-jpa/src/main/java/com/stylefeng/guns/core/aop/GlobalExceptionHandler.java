@@ -4,9 +4,7 @@ import com.baomidou.kaptcha.exception.KaptchaException;
 import com.baomidou.kaptcha.exception.KaptchaIncorrectException;
 import com.baomidou.kaptcha.exception.KaptchaNotFoundException;
 import com.baomidou.kaptcha.exception.KaptchaTimeoutException;
-import com.stylefeng.guns.core.base.tips.ErrorTip;
 import com.stylefeng.guns.core.common.exception.BizExceptionEnum;
-import com.stylefeng.guns.core.exception.GunsException;
 import com.stylefeng.guns.core.log.LogManager;
 import com.stylefeng.guns.core.log.factory.LogTaskFactory;
 import com.stylefeng.guns.core.shiroext.kit.ShiroKit;
@@ -22,12 +20,14 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import org.tan.jpa.exception.GunsException;
+import org.tan.jpa.tips.ErrorTip;
 
 import javax.persistence.EntityNotFoundException;
 import java.lang.reflect.UndeclaredThrowableException;
 
-import static com.stylefeng.guns.core.support.HttpKit.getIp;
-import static com.stylefeng.guns.core.support.HttpKit.getRequest;
+import static org.tan.jpa.util.HttpKit.getIp;
+import static org.tan.jpa.util.HttpKit.getRequest;
 
 /**
  * 全局的的异常拦截器（拦截所有的控制器）

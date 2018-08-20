@@ -1,0 +1,3 @@
+# AutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.tan.jpa.controller.GlobalController

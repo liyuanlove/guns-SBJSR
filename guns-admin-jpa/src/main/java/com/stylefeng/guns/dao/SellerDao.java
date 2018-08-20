@@ -1,12 +1,12 @@
 package com.stylefeng.guns.dao;
 
-import com.stylefeng.guns.core.base.dao.BaseDao;
 import com.stylefeng.guns.po.Seller;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+import org.tan.jpa.dao.BaseDao;
 
 import java.util.List;
 import java.util.Map;

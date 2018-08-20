@@ -11,6 +11,7 @@
 
     <!--子模块-->
     <modules>
+        <module>kit-jpa</module>
         <module>guns-core-jpa</module>
         <module>guns-generator-jpa</module>
         <module>guns-admin-jpa</module>
@@ -58,12 +59,17 @@
             <!--guns内部依赖-->
             <dependency>
                 <groupId>org.tan</groupId>
-                <artifactId>guns-generator-jpa</artifactId>
+                <artifactId>guns-core-jpa</artifactId>
                 <version>${guns.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.tan</groupId>
-                <artifactId>guns-core-jpa</artifactId>
+                <artifactId>kit-jpa</artifactId>
+                <version>${guns.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.tan</groupId>
+                <artifactId>guns-generator-jpa</artifactId>
                 <version>${guns.version}</version>
             </dependency>
 

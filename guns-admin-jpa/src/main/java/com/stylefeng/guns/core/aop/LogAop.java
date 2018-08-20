@@ -8,7 +8,6 @@ import com.stylefeng.guns.core.log.LogManager;
 import com.stylefeng.guns.core.log.factory.LogTaskFactory;
 import com.stylefeng.guns.core.shiroext.kit.ShiroKit;
 import com.stylefeng.guns.core.shiroext.vo.ShiroUser;
-import com.stylefeng.guns.core.support.HttpKit;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
@@ -17,6 +16,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
+import org.tan.jpa.util.HttpKit;
 
 import java.lang.reflect.Method;
 import java.util.TimerTask;

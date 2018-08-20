@@ -18,7 +18,6 @@ package com.stylefeng.guns.core.shiroext.kit;
 import com.stylefeng.guns.core.common.constant.AdminConst;
 import com.stylefeng.guns.core.common.constant.factory.ConstantFactory;
 import com.stylefeng.guns.core.common.exception.BizExceptionEnum;
-import com.stylefeng.guns.core.exception.GunsException;
 import com.stylefeng.guns.core.shiroext.vo.ShiroUser;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.po.User;
@@ -29,6 +28,7 @@ import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.ByteSource;
 import org.apache.shiro.web.util.WebUtils;
+import org.tan.jpa.exception.GunsException;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;

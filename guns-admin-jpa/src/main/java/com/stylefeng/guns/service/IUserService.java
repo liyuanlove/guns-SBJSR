@@ -1,7 +1,7 @@
 package com.stylefeng.guns.service;
 
-import com.stylefeng.guns.core.base.service.IBaseService;
 import com.stylefeng.guns.po.User;
+import org.tan.jpa.service.IBaseService;
 
 import java.util.Date;
 import java.util.List;

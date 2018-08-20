@@ -1,8 +1,8 @@
 package com.stylefeng.guns.dao;
 
-import com.stylefeng.guns.core.base.dao.BaseDao;
 import com.stylefeng.guns.po.LoginLog;
 import org.springframework.stereotype.Repository;
+import org.tan.jpa.dao.BaseDao;
 
 /**
  * 登录日志Dao

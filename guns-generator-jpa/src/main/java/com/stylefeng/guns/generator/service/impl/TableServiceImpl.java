@@ -1,10 +1,10 @@
 package com.stylefeng.guns.generator.service.impl;
 
-import com.stylefeng.guns.core.base.service.impl.BaseServiceImpl;
 import com.stylefeng.guns.generator.dao.TablesDao;
 import com.stylefeng.guns.generator.po.Tables;
 import com.stylefeng.guns.generator.service.ITableService;
 import org.springframework.stereotype.Service;
+import org.tan.jpa.service.impl.BaseServiceImpl;
 
 import java.util.List;
 import java.util.Map;

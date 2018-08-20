@@ -9,13 +9,13 @@ import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.DbType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.stylefeng.guns.core.support.StrKit;
-import com.stylefeng.guns.core.util.FileUtil;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.generator.config.ContextConfig;
 import com.stylefeng.guns.generator.config.MenuSqlConfig;
 import com.stylefeng.guns.generator.engine.GunsTemplateEngine;
 import com.stylefeng.guns.generator.engine.SimpleTemplateEngine;
 import com.stylefeng.guns.generator.model.GenTemplateParam;
+import org.tan.jpa.util.FileUtil;
 
 import java.io.File;
 import java.util.List;

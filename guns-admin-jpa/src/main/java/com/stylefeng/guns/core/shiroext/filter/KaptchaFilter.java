@@ -14,7 +14,7 @@ import org.apache.shiro.web.util.WebUtils;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-import static com.stylefeng.guns.core.support.HttpKit.getIp;
+import static org.tan.jpa.util.HttpKit.getIp;
 
 /**
  * 登录过滤器

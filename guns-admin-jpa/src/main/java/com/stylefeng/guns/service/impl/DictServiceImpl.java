@@ -1,9 +1,7 @@
 package com.stylefeng.guns.service.impl;
 
-import com.stylefeng.guns.core.base.service.impl.BaseServiceImpl;
 import com.stylefeng.guns.core.common.constant.factory.MutiStrFactory;
 import com.stylefeng.guns.core.common.exception.BizExceptionEnum;
-import com.stylefeng.guns.core.exception.GunsException;
 import com.stylefeng.guns.dao.DictDao;
 import com.stylefeng.guns.po.Dict;
 import com.stylefeng.guns.service.IDictService;
@@ -12,6 +10,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.tan.jpa.exception.GunsException;
+import org.tan.jpa.service.impl.BaseServiceImpl;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;

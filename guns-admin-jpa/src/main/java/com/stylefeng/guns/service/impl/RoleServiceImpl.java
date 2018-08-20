@@ -1,9 +1,7 @@
 package com.stylefeng.guns.service.impl;
 
-import com.stylefeng.guns.core.base.service.impl.BaseServiceImpl;
 import com.stylefeng.guns.core.common.constant.AdminConst;
 import com.stylefeng.guns.core.common.exception.BizExceptionEnum;
-import com.stylefeng.guns.core.exception.GunsException;
 import com.stylefeng.guns.core.support.BeanKit;
 import com.stylefeng.guns.core.support.StrKit;
 import com.stylefeng.guns.core.util.Convert;
@@ -21,6 +19,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.tan.jpa.exception.GunsException;
+import org.tan.jpa.service.impl.BaseServiceImpl;
 
 import javax.annotation.Resource;
 import javax.persistence.criteria.CriteriaBuilder;

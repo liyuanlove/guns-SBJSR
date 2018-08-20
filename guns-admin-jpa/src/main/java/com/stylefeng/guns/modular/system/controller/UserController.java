@@ -1,8 +1,6 @@
 package com.stylefeng.guns.modular.system.controller;
 
 import com.stylefeng.guns.config.properties.GunsProperties;
-import com.stylefeng.guns.core.base.controller.BaseController;
-import com.stylefeng.guns.core.base.tips.Tip;
 import com.stylefeng.guns.core.common.annotion.BizLog;
 import com.stylefeng.guns.core.common.annotion.BizNameType;
 import com.stylefeng.guns.core.common.constant.AdminConst;
@@ -10,11 +8,9 @@ import com.stylefeng.guns.core.common.constant.cache.Cache;
 import com.stylefeng.guns.core.common.constant.cache.CacheKey;
 import com.stylefeng.guns.core.common.constant.factory.ConstantFactory;
 import com.stylefeng.guns.core.common.exception.BizExceptionEnum;
-import com.stylefeng.guns.core.exception.GunsException;
 import com.stylefeng.guns.core.redis.cache.RedisCacheDao;
 import com.stylefeng.guns.core.shiroext.kit.ShiroKit;
 import com.stylefeng.guns.core.shiroext.vo.ShiroUser;
-import com.stylefeng.guns.core.util.FileUtil;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.po.User;
 import com.stylefeng.guns.service.IUserService;
@@ -32,6 +28,10 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.tan.jpa.controller.BaseController;
+import org.tan.jpa.exception.GunsException;
+import org.tan.jpa.tips.Tip;
+import org.tan.jpa.util.FileUtil;
 
 import javax.naming.NoPermissionException;
 import javax.servlet.http.HttpServletResponse;

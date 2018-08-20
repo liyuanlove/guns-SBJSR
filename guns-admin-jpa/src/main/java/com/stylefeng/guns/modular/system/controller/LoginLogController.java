@@ -1,6 +1,5 @@
 package com.stylefeng.guns.modular.system.controller;
 
-import com.stylefeng.guns.core.base.controller.BaseController;
 import com.stylefeng.guns.core.common.annotion.BizLog;
 import com.stylefeng.guns.core.common.constant.AdminConst;
 import com.stylefeng.guns.core.common.page.PageableFactory;
@@ -17,6 +16,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.tan.jpa.controller.BaseController;
 
 import java.util.Date;
 import java.util.List;

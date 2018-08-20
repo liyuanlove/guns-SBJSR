@@ -1,11 +1,11 @@
 package com.stylefeng.guns.warpper;
 
-import com.stylefeng.guns.core.base.warpper.BeanWarpper;
 import com.stylefeng.guns.core.common.constant.factory.ConstantFactory;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.po.OperationLog;
 import com.stylefeng.guns.vo.OperationLogVo;
 import org.springframework.beans.BeanUtils;
+import org.tan.jpa.warpper.BeanWarpper;
 
 /**
  * 日志列表的包装类

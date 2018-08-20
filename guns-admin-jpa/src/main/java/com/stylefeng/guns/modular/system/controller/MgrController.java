@@ -1,11 +1,8 @@
 package com.stylefeng.guns.modular.system.controller;
 
-import com.stylefeng.guns.core.base.controller.BaseController;
-import com.stylefeng.guns.core.base.tips.Tip;
 import com.stylefeng.guns.core.common.constant.AdminConst;
 import com.stylefeng.guns.core.common.constant.enums.TrebleStatus;
 import com.stylefeng.guns.core.common.exception.BizExceptionEnum;
-import com.stylefeng.guns.core.exception.GunsException;
 import com.stylefeng.guns.core.shiroext.kit.ShiroKit;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.po.User;
@@ -19,6 +16,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.tan.jpa.controller.BaseController;
+import org.tan.jpa.exception.GunsException;
+import org.tan.jpa.tips.Tip;
 
 /**
  * 系统管理员控制器

@@ -1,7 +1,6 @@
 package com.stylefeng.guns.core.tag;
 
 import com.stylefeng.guns.core.common.exception.BizExceptionEnum;
-import com.stylefeng.guns.core.exception.GunsException;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.po.Dict;
 import com.stylefeng.guns.service.IDictService;
@@ -9,6 +8,7 @@ import org.beetl.core.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import org.tan.jpa.exception.GunsException;
 
 import java.io.IOException;
 import java.util.List;

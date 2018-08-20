@@ -1,8 +1,8 @@
 package com.stylefeng.guns.core.util;
 
 import com.alibaba.fastjson.JSON;
-import com.stylefeng.guns.core.enums.GunsExceptionEnum;
-import com.stylefeng.guns.core.exception.GunsException;
+import org.tan.jpa.enums.SimpleExceptionEnum;
+import org.tan.jpa.exception.GunsException;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -26,7 +26,7 @@ public class RenderUtil {
             PrintWriter writer = response.getWriter();
             writer.write(JSON.toJSONString(jsonObject));
         } catch (IOException e) {
-            throw new GunsException(GunsExceptionEnum.WRITE_ERROR);
+            throw new GunsException(SimpleExceptionEnum.WRITE_ERROR);
         }
     }
 }

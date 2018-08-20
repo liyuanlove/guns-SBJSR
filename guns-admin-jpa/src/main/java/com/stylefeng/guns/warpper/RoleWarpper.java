@@ -1,11 +1,11 @@
 package com.stylefeng.guns.warpper;
 
-import com.stylefeng.guns.core.base.warpper.BeanWarpper;
 import com.stylefeng.guns.core.common.constant.factory.ConstantFactory;
 import com.stylefeng.guns.po.Role;
 import com.stylefeng.guns.vo.RoleVo;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
+import org.tan.jpa.warpper.BeanWarpper;
 
 /**
  * 角色列表的包装类
