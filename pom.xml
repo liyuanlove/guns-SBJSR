@@ -11,7 +11,7 @@
 
     <!--子模块-->
     <modules>
-        <module>kit-spring-boot-jpa</module>
+        <module>jpa-spring-boot</module>
         <module>guns-core-jpa</module>
         <module>guns-generator-jpa</module>
         <module>guns-admin-jpa</module>
@@ -71,7 +71,7 @@
             </dependency>
             <dependency>
                 <groupId>org.tc.SBJ</groupId>
-                <artifactId>kit-spring-boot-jpa</artifactId>
+                <artifactId>jpa-spring-boot</artifactId>
                 <version>${guns.version}</version>
             </dependency>
             <dependency>
