@@ -15,7 +15,7 @@ import com.stylefeng.guns.generator.config.MenuSqlConfig;
 import com.stylefeng.guns.generator.engine.GunsTemplateEngine;
 import com.stylefeng.guns.generator.engine.SimpleTemplateEngine;
 import com.stylefeng.guns.generator.model.GenTemplateParam;
-import org.tan.jpa.util.FileUtil;
+import org.tc.jpa.util.FileUtil;
 
 import java.io.File;
 import java.util.List;

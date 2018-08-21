@@ -1,6 +1,6 @@
 package ${controller.packageName};
 
-import org.tan.jpa.controller.BaseController;
+import org.tc.jpa.controller.BaseController;
 import com.stylefeng.guns.core.log.LogObjectHolder;
 import com.stylefeng.guns.po.${context.poClassName};
 import io.swagger.annotations.ApiImplicitParam;

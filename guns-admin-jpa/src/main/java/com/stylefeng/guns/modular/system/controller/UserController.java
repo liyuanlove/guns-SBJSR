@@ -28,10 +28,10 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.tan.jpa.controller.BaseController;
-import org.tan.jpa.exception.GunsException;
-import org.tan.jpa.tips.Tip;
-import org.tan.jpa.util.FileUtil;
+import org.tc.jpa.controller.BaseController;
+import org.tc.jpa.exception.GunsException;
+import org.tc.jpa.tips.Tip;
+import org.tc.jpa.util.FileUtil;
 
 import javax.naming.NoPermissionException;
 import javax.servlet.http.HttpServletResponse;

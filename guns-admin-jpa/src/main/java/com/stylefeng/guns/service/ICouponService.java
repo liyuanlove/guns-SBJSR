@@ -3,7 +3,7 @@ package com.stylefeng.guns.service;
 import com.stylefeng.guns.po.Coupon;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.tan.jpa.service.IBaseService;
+import org.tc.jpa.service.IBaseService;
 
 import java.util.List;
 

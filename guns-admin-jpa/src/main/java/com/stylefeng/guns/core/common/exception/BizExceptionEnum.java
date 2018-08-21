@@ -1,6 +1,6 @@
 package com.stylefeng.guns.core.common.exception;
 
-import org.tan.jpa.enums.IExceptionEnum;
+import org.tc.jpa.enums.IExceptionEnum;
 
 /**
  * @author fengshuonan

@@ -2,7 +2,7 @@ package com.stylefeng.guns.dao;
 
 import com.stylefeng.guns.po.User;
 import org.springframework.stereotype.Repository;
-import org.tan.jpa.dao.BaseDao;
+import org.tc.jpa.dao.BaseDao;
 
 import java.util.List;
 

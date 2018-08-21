@@ -5,7 +5,7 @@ import com.stylefeng.guns.po.Notice;
 import com.stylefeng.guns.service.INoticeService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
-import org.tan.jpa.service.impl.BaseServiceImpl;
+import org.tc.jpa.service.impl.BaseServiceImpl;
 
 import java.util.List;
 

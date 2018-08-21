@@ -5,7 +5,7 @@ import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.po.Dept;
 import com.stylefeng.guns.vo.DeptVo;
 import org.springframework.beans.BeanUtils;
-import org.tan.jpa.warpper.BeanWarpper;
+import org.tc.jpa.warpper.BeanWarpper;
 
 /**
  * 部门列表的包装

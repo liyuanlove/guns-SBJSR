@@ -8,7 +8,7 @@ import org.beetl.core.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-import org.tan.jpa.exception.GunsException;
+import org.tc.jpa.exception.GunsException;
 
 import java.io.IOException;
 import java.util.List;

@@ -4,7 +4,7 @@ import com.stylefeng.guns.core.common.constant.factory.ConstantFactory;
 import com.stylefeng.guns.po.Notice;
 import com.stylefeng.guns.vo.NoticeVo;
 import org.springframework.beans.BeanUtils;
-import org.tan.jpa.warpper.BeanWarpper;
+import org.tc.jpa.warpper.BeanWarpper;
 
 /**
  * 部门列表的包装

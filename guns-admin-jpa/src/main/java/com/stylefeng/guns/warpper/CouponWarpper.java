@@ -6,7 +6,7 @@ import com.stylefeng.guns.vo.CouponVo;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.beans.BeanUtils;
-import org.tan.jpa.warpper.BeanWarpper;
+import org.tc.jpa.warpper.BeanWarpper;
 
 import java.util.Calendar;
 import java.util.Date;

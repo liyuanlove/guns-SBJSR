@@ -4,7 +4,7 @@ import com.stylefeng.guns.generator.dao.TablesDao;
 import com.stylefeng.guns.generator.po.Tables;
 import com.stylefeng.guns.generator.service.ITableService;
 import org.springframework.stereotype.Service;
-import org.tan.jpa.service.impl.BaseServiceImpl;
+import org.tc.jpa.service.impl.BaseServiceImpl;
 
 import java.util.List;
 import java.util.Map;

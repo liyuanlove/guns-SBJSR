@@ -6,7 +6,7 @@ import com.stylefeng.guns.po.User;
 import com.stylefeng.guns.vo.UserVo;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
-import org.tan.jpa.warpper.BeanWarpper;
+import org.tc.jpa.warpper.BeanWarpper;
 
 /**
  * 用户管理的包装类

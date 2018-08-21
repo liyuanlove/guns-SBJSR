@@ -19,9 +19,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.tan.jpa.controller.BaseController;
-import org.tan.jpa.exception.GunsException;
-import org.tan.jpa.tips.Tip;
+import org.tc.jpa.controller.BaseController;
+import org.tc.jpa.exception.GunsException;
+import org.tc.jpa.tips.Tip;
 
 import javax.validation.Valid;
 import java.util.List;

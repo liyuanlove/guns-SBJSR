@@ -20,14 +20,14 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import org.tan.jpa.exception.GunsException;
-import org.tan.jpa.tips.ErrorTip;
+import org.tc.jpa.exception.GunsException;
+import org.tc.jpa.tips.ErrorTip;
 
 import javax.persistence.EntityNotFoundException;
 import java.lang.reflect.UndeclaredThrowableException;
 
-import static org.tan.jpa.util.HttpKit.getIp;
-import static org.tan.jpa.util.HttpKit.getRequest;
+import static org.tc.jpa.util.HttpKit.getIp;
+import static org.tc.jpa.util.HttpKit.getRequest;
 
 /**
  * 全局的的异常拦截器（拦截所有的控制器）

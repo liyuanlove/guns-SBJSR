@@ -5,7 +5,7 @@ import com.stylefeng.guns.po.Role;
 import com.stylefeng.guns.vo.RoleVo;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
-import org.tan.jpa.warpper.BeanWarpper;
+import org.tc.jpa.warpper.BeanWarpper;
 
 /**
  * 角色列表的包装类

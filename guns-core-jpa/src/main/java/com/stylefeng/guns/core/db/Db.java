@@ -1,7 +1,7 @@
 package com.stylefeng.guns.core.db;
 
 import com.stylefeng.guns.core.util.SpringContextHolder;
-import org.tan.jpa.dao.BaseDao;
+import org.tc.jpa.dao.BaseDao;
 
 /**
  * 便捷数据库操作类

@@ -4,7 +4,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.tan.jpa.util.HttpKit;
+import org.tc.jpa.util.HttpKit;
 
 import javax.servlet.http.HttpServletRequest;
 

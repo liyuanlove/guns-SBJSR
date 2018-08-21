@@ -19,9 +19,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.tan.jpa.controller.BaseController;
-import org.tan.jpa.exception.GunsException;
-import org.tan.jpa.tips.SuccessTip;
+import org.tc.jpa.controller.BaseController;
+import org.tc.jpa.exception.GunsException;
+import org.tc.jpa.tips.SuccessTip;
 
 import javax.validation.Valid;
 import java.net.InetAddress;

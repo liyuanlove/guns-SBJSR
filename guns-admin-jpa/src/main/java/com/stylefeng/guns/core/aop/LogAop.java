@@ -16,7 +16,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
-import org.tan.jpa.util.HttpKit;
+import org.tc.jpa.util.HttpKit;
 
 import java.lang.reflect.Method;
 import java.util.TimerTask;

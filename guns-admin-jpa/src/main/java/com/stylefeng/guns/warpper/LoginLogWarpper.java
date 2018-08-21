@@ -5,7 +5,7 @@ import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.po.LoginLog;
 import com.stylefeng.guns.vo.LoginLogVo;
 import org.springframework.beans.BeanUtils;
-import org.tan.jpa.warpper.BeanWarpper;
+import org.tc.jpa.warpper.BeanWarpper;
 
 /**
  * 日志列表的包装类

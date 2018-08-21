@@ -1,8 +1,8 @@
 package com.stylefeng.guns.core.util;
 
 import com.alibaba.fastjson.JSON;
-import org.tan.jpa.enums.SimpleExceptionEnum;
-import org.tan.jpa.exception.GunsException;
+import org.tc.jpa.enums.SimpleExceptionEnum;
+import org.tc.jpa.exception.GunsException;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

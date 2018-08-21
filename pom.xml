@@ -1,17 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.tan</groupId>
-    <artifactId>guns-SBJSR</artifactId>
+    <groupId>org.tc.SBJ</groupId>
+    <artifactId>parent-SBJ</artifactId>
     <version>1.0.0</version>
 
-    <name>guns-parent-jpa</name>
+    <name>parent-SBJ</name>
     <!--父工程-->
     <packaging>pom</packaging>
 
     <!--子模块-->
     <modules>
-        <module>kit-jpa</module>
+        <module>kit-spring-boot-jpa</module>
         <module>guns-core-jpa</module>
         <module>guns-generator-jpa</module>
         <module>guns-admin-jpa</module>
@@ -58,17 +58,17 @@
 
             <!--guns内部依赖-->
             <dependency>
-                <groupId>org.tan</groupId>
+                <groupId>org.tc.SBJ</groupId>
                 <artifactId>guns-core-jpa</artifactId>
                 <version>${guns.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.tan</groupId>
-                <artifactId>kit-jpa</artifactId>
+                <groupId>org.tc.SBJ</groupId>
+                <artifactId>kit-spring-boot-jpa</artifactId>
                 <version>${guns.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.tan</groupId>
+                <groupId>org.tc.SBJ</groupId>
                 <artifactId>guns-generator-jpa</artifactId>
                 <version>${guns.version}</version>
             </dependency>
@@ -143,7 +143,7 @@
 
             <!--本地打包验证码-->
             <dependency>
-                <groupId>org.tan</groupId>
+                <groupId>org.tc.kaptcha</groupId>
                 <artifactId>kaptcha-spring-boot-starter</artifactId>
                 <version>${kaptcha.version}</version>
             </dependency>

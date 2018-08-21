@@ -28,7 +28,7 @@ import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.ByteSource;
 import org.apache.shiro.web.util.WebUtils;
-import org.tan.jpa.exception.GunsException;
+import org.tc.jpa.exception.GunsException;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;

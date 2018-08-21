@@ -10,8 +10,8 @@
     <description>guns 的spring boot版本</description>
 
     <parent>
-        <groupId>org.tan</groupId>
-        <artifactId>guns-SBJSR</artifactId>
+        <groupId>org.tc.SBJ</groupId>
+        <artifactId>parent-SBJ</artifactId>
         <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
@@ -19,13 +19,9 @@
     <dependencies>
 
         <dependency>
-            <groupId>org.tan</groupId>
+            <groupId>org.tc.SBJ</groupId>
             <artifactId>guns-core-jpa</artifactId>
         </dependency>
-        <!--<dependency>-->
-        <!--<groupId>org.tan</groupId>-->
-        <!--<artifactId>guns-generator-jpa</artifactId>-->
-        <!--</dependency>-->
 
         <!--spring boot依赖-->
         <dependency>
@@ -90,7 +86,7 @@
         <!--</dependency>-->
 
         <dependency>
-            <groupId>org.tan</groupId>
+            <groupId>org.tc.kaptcha</groupId>
             <artifactId>kaptcha-spring-boot-starter</artifactId>
         </dependency>
         <dependency>

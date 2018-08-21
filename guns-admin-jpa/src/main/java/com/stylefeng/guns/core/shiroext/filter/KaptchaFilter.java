@@ -14,7 +14,7 @@ import org.apache.shiro.web.util.WebUtils;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-import static org.tan.jpa.util.HttpKit.getIp;
+import static org.tc.jpa.util.HttpKit.getIp;
 
 /**
  * 登录过滤器

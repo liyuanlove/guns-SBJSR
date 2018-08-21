@@ -2,7 +2,7 @@ package com.stylefeng.guns.service;
 
 import com.stylefeng.guns.core.ztree.ZTreeNode;
 import com.stylefeng.guns.po.Dept;
-import org.tan.jpa.service.IBaseService;
+import org.tc.jpa.service.IBaseService;
 
 import java.util.List;
 

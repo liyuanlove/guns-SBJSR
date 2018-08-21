@@ -10,15 +10,15 @@
     <description>代码生成器</description>
 
     <parent>
-        <groupId>org.tan</groupId>
-        <artifactId>guns-SBJSR</artifactId>
+        <groupId>org.tc.SBJ</groupId>
+        <artifactId>parent-SBJ</artifactId>
         <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <dependencies>
         <dependency>
-            <groupId>org.tan</groupId>
+            <groupId>org.tc.SBJ</groupId>
             <artifactId>guns-core-jpa</artifactId>
         </dependency>
 

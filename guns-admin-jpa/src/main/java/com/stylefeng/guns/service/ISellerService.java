@@ -4,7 +4,7 @@ import com.stylefeng.guns.core.ztree.ZTreeNode;
 import com.stylefeng.guns.po.Seller;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.tan.jpa.service.IBaseService;
+import org.tc.jpa.service.IBaseService;
 
 import java.util.List;
 

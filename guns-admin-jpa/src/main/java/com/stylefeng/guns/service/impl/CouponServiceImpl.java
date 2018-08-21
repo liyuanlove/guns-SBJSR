@@ -17,8 +17,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.tan.jpa.exception.GunsException;
-import org.tan.jpa.service.impl.BaseServiceImpl;
+import org.tc.jpa.exception.GunsException;
+import org.tc.jpa.service.impl.BaseServiceImpl;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;

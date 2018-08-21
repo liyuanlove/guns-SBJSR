@@ -5,7 +5,7 @@ import com.stylefeng.guns.core.constant.IsMenu;
 import com.stylefeng.guns.po.Menu;
 import com.stylefeng.guns.vo.MenuVo;
 import org.springframework.beans.BeanUtils;
-import org.tan.jpa.warpper.BeanWarpper;
+import org.tc.jpa.warpper.BeanWarpper;
 
 /**
  * 菜单列表的包装类

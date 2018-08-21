@@ -19,8 +19,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.tan.jpa.exception.GunsException;
-import org.tan.jpa.service.impl.BaseServiceImpl;
+import org.tc.jpa.exception.GunsException;
+import org.tc.jpa.service.impl.BaseServiceImpl;
 
 import javax.annotation.Resource;
 import javax.persistence.criteria.CriteriaBuilder;

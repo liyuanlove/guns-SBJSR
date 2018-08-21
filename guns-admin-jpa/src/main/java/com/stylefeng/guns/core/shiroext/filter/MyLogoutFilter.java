@@ -8,7 +8,7 @@ import org.apache.shiro.web.filter.authc.LogoutFilter;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-import static org.tan.jpa.util.HttpKit.getIp;
+import static org.tc.jpa.util.HttpKit.getIp;
 
 /**
  * 自定义登出过滤器

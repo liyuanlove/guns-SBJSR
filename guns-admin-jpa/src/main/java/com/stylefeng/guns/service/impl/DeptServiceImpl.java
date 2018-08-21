@@ -9,8 +9,8 @@ import com.stylefeng.guns.service.IDeptService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.tan.jpa.exception.GunsException;
-import org.tan.jpa.service.impl.BaseServiceImpl;
+import org.tc.jpa.exception.GunsException;
+import org.tc.jpa.service.impl.BaseServiceImpl;
 
 import java.util.List;
 import java.util.Map;
