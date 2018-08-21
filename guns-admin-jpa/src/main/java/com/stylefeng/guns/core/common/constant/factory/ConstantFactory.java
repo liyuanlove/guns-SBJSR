@@ -4,7 +4,6 @@ package com.stylefeng.guns.core.common.constant.factory;
 import com.stylefeng.guns.core.common.constant.cache.Cache;
 import com.stylefeng.guns.core.common.constant.cache.CacheKey;
 import com.stylefeng.guns.core.common.constant.enums.TrebleStatus;
-import com.stylefeng.guns.core.redis.cache.RedisCacheDao;
 import com.stylefeng.guns.core.support.CollectionKit;
 import com.stylefeng.guns.core.support.StrKit;
 import com.stylefeng.guns.core.util.SpringContextHolder;
@@ -15,6 +14,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
+import org.tc.redis.cache.RedisCacheDao;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;

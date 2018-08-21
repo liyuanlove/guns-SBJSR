@@ -8,7 +8,6 @@ import com.stylefeng.guns.core.common.constant.cache.Cache;
 import com.stylefeng.guns.core.common.constant.cache.CacheKey;
 import com.stylefeng.guns.core.common.constant.factory.ConstantFactory;
 import com.stylefeng.guns.core.common.exception.BizExceptionEnum;
-import com.stylefeng.guns.core.redis.cache.RedisCacheDao;
 import com.stylefeng.guns.core.shiroext.kit.ShiroKit;
 import com.stylefeng.guns.core.shiroext.vo.ShiroUser;
 import com.stylefeng.guns.core.util.ToolUtil;
@@ -32,6 +31,7 @@ import org.tc.jpa.controller.BaseController;
 import org.tc.jpa.exception.GunsException;
 import org.tc.jpa.tips.Tip;
 import org.tc.jpa.util.FileUtil;
+import org.tc.redis.cache.RedisCacheDao;
 
 import javax.naming.NoPermissionException;
 import javax.servlet.http.HttpServletResponse;

@@ -15,6 +15,7 @@
         <module>guns-core-jpa</module>
         <module>guns-generator-jpa</module>
         <module>guns-admin-jpa</module>
+        <module>redis-spring-boot-cache</module>
     </modules>
 
     <parent>
@@ -60,6 +61,11 @@
             <dependency>
                 <groupId>org.tc.SBJ</groupId>
                 <artifactId>guns-core-jpa</artifactId>
+                <version>${guns.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.tc.SBJ</groupId>
+                <artifactId>redis-spring-boot-cache</artifactId>
                 <version>${guns.version}</version>
             </dependency>
             <dependency>

@@ -6,7 +6,6 @@ import com.stylefeng.guns.core.common.constant.AdminConst;
 import com.stylefeng.guns.core.common.constant.cache.Cache;
 import com.stylefeng.guns.core.common.constant.cache.CacheKey;
 import com.stylefeng.guns.core.common.exception.BizExceptionEnum;
-import com.stylefeng.guns.core.redis.cache.RedisCacheDao;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.po.Dict;
 import com.stylefeng.guns.service.IDictService;
@@ -21,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.tc.jpa.controller.BaseController;
 import org.tc.jpa.exception.GunsException;
+import org.tc.redis.cache.RedisCacheDao;
 
 import java.util.List;
 

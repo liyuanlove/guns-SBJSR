@@ -1,6 +1,5 @@
-package com.stylefeng.guns.config;
+package org.tc.redis;
 
-import com.stylefeng.guns.core.redis.ProtoStuffRedisSerializer;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.interceptor.KeyGenerator;
 import org.springframework.context.annotation.Bean;
@@ -12,6 +11,7 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.serializer.RedisSerializationContext;
+import org.tc.redis.serialize.ProtoStuffRedisSerializer;
 
 import java.lang.reflect.Method;
 import java.net.UnknownHostException;

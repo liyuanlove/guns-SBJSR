@@ -1,4 +1,4 @@
-package com.stylefeng.guns.core.redis;
+package org.tc.redis.serialize;
 
 import com.dyuproject.protostuff.LinkedBuffer;
 import com.dyuproject.protostuff.ProtostuffIOUtil;
