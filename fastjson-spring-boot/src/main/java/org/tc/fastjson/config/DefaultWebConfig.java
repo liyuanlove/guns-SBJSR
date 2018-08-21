@@ -1,19 +1,18 @@
-package com.stylefeng.guns.core.config;
+package org.tc.fastjson.config;
 
-import com.stylefeng.guns.core.util.DateUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.support.GenericConversionService;
+import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.bind.support.ConfigurableWebBindingInitializer;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
-import org.tc.jpa.controller.GunsErrorView;
-import org.tc.jpa.enums.SimpleExceptionEnum;
-import org.tc.jpa.exception.GunsException;
+import org.tc.fastjson.exception.FastJsonException;
+import org.tc.fastjson.util.DateUtil;
 
 import javax.annotation.PostConstruct;
 import java.util.Date;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class DefaultWebConfig extends DefaultFastjsonConfig {
@@ -21,9 +20,17 @@ public class DefaultWebConfig extends DefaultFastjsonConfig {
     @Autowired
     private RequestMappingHandlerAdapter handlerAdapter;
 
-    @Bean("error")
-    public GunsErrorView error() {
-        return new GunsErrorView();
+    /**
+     * 使用阿里 FastJson 作为JSON MessageConverter
+     *
+     * @param converters
+     */
+    @Override
+    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+        //将转换器添加到converters中
+        converters.add(fastJsonHttpMessageConverter());
+        // 这里必须加上加载默认转换器，不然bug玩死人，
+        addDefaultHttpMessageConverters(converters);
     }
 
     @PostConstruct
@@ -58,7 +65,7 @@ public class DefaultWebConfig extends DefaultFastjsonConfig {
             } else if (timeSecondsFlag) {
                 return DateUtil.parseTime(dateString);
             } else {
-                throw new GunsException(SimpleExceptionEnum.INVLIDE_DATE_STRING);
+                throw new FastJsonException(400, "输入日期格式不对");
             }
 
         }

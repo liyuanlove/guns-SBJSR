@@ -4,7 +4,6 @@ import com.stylefeng.guns.core.common.constant.AdminConst;
 import com.stylefeng.guns.core.common.constant.enums.TrebleStatus;
 import com.stylefeng.guns.core.common.exception.BizExceptionEnum;
 import com.stylefeng.guns.core.shiroext.kit.ShiroKit;
-import com.stylefeng.guns.core.util.DateUtil;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.dao.DeptDao;
 import com.stylefeng.guns.dao.UserDao;
@@ -16,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.tc.fastjson.util.DateUtil;
 import org.tc.jpa.exception.GunsException;
 import org.tc.jpa.service.impl.BaseServiceImpl;
 

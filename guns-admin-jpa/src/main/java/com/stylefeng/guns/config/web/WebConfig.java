@@ -1,14 +1,13 @@
 package com.stylefeng.guns.config.web;
 
 import com.stylefeng.guns.config.properties.GunsProperties;
-import com.stylefeng.guns.core.config.DefaultWebConfig;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.util.ResourceUtils;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-
-import java.util.List;
+import org.tc.fastjson.config.DefaultWebConfig;
+import org.tc.jpa.controller.GunsErrorView;
 
 /**
  * web 配置类
@@ -24,6 +23,11 @@ public class WebConfig extends DefaultWebConfig {
     @Autowired
     private GunsProperties gunsProperties;
 
+    @Bean("error")
+    public GunsErrorView error() {
+        return new GunsErrorView();
+    }
+
     /**
      * 增加swagger的支持
      */
@@ -36,20 +40,5 @@ public class WebConfig extends DefaultWebConfig {
         }
         super.addResourceHandlers(registry);
     }
-
-    /**
-     * 使用阿里 FastJson 作为JSON MessageConverter
-     *
-     * @param converters
-     */
-    @Override
-    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-        //将转换器添加到converters中
-        converters.add(fastJsonHttpMessageConverter());
-        // 这里必须加上加载默认转换器，不然bug玩死人，并且该bug目前在网络上似乎没有解决方案
-        // 百度，谷歌，各大论坛等。你可以试试去掉。
-        addDefaultHttpMessageConverters(converters);
-    }
-
 
 }

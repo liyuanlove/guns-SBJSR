@@ -16,6 +16,7 @@
         <module>guns-generator-jpa</module>
         <module>guns-admin-jpa</module>
         <module>redis-spring-boot-cache</module>
+        <module>fastjson-spring-boot</module>
     </modules>
 
     <parent>
@@ -71,6 +72,11 @@
             <dependency>
                 <groupId>org.tc.SBJ</groupId>
                 <artifactId>kit-spring-boot-jpa</artifactId>
+                <version>${guns.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.tc.SBJ</groupId>
+                <artifactId>fastjson-spring-boot</artifactId>
                 <version>${guns.version}</version>
             </dependency>
             <dependency>

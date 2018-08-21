@@ -1,5 +1,7 @@
 package com.stylefeng.guns.core.util;
 
+import org.tc.fastjson.util.DateUtil;
+
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

@@ -1,6 +1,5 @@
 package com.stylefeng.guns.service.impl;
 
-import com.stylefeng.guns.core.util.DateUtil;
 import com.stylefeng.guns.dao.LoginLogDao;
 import com.stylefeng.guns.po.LoginLog;
 import com.stylefeng.guns.service.ILoginLogService;
@@ -9,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.tc.fastjson.util.DateUtil;
 import org.tc.jpa.service.impl.BaseServiceImpl;
 
 import javax.persistence.criteria.CriteriaBuilder;
