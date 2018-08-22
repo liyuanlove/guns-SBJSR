@@ -12,11 +12,11 @@
     <!--子模块-->
     <modules>
         <module>jpa-spring-boot</module>
+        <module>redis-spring-boot-cache</module>
+        <module>fastjson-spring-boot</module>
         <module>guns-core-jpa</module>
         <module>guns-generator-jpa</module>
         <module>guns-admin-jpa</module>
-        <module>redis-spring-boot-cache</module>
-        <module>fastjson-spring-boot</module>
     </modules>
 
     <parent>
