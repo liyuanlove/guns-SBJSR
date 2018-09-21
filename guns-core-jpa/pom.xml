@@ -21,10 +21,9 @@
             <artifactId>jpa-spring-boot</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.tc.SBJ</groupId>
+            <groupId>org.tc.springboot</groupId>
             <artifactId>fastjson-spring-boot</artifactId>
         </dependency>
-
         <!--web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -1,3 +1,0 @@
-# Auto Configure
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-org.tc.redis.RedisConfig,org.tc.redis.cache.RedisCacheDaoImpl

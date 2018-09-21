@@ -6,7 +6,6 @@ import com.stylefeng.guns.core.common.exception.BizExceptionEnum;
 import com.stylefeng.guns.core.shiroext.kit.ShiroKit;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.po.User;
-import com.stylefeng.guns.service.ISellerService;
 import com.stylefeng.guns.service.IUserService;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,8 +33,6 @@ public class MgrController extends BaseController {
 
     @Autowired
     private IUserService userService;
-    @Autowired
-    private ISellerService sellerService;
 
     /**
      * 删除管理员（逻辑删除）
@@ -149,40 +146,6 @@ public class MgrController extends BaseController {
         }
         //一般用户只具有几个角色，故不再设计桥接表
         this.userService.setRoles(userId, roleIds);
-        return SUCCESS_TIP;
-    }
-
-    /**
-     * 指定卖家页面
-     */
-    @RequestMapping("/seller_assign/{userId}")
-    public String sellerAssign(@PathVariable Integer userId, Model model) {
-        if (ToolUtil.isEmpty(userId)) {
-            throw new GunsException(BizExceptionEnum.REQUEST_NULL);
-        }
-        User user = userService.getOneById(userId);
-        model.addAttribute("userId", userId);
-        model.addAttribute("userAccount", user.getAccount());
-        return PREFIX + "user_sellerassign.html";
-    }
-
-    /**
-     * 分配卖家
-     */
-    @RequestMapping("/setSeller")
-//    @BizLog(value = "分配卖家", key = "userId,sellerIds", type = SellerDict.class)
-    @RequiresRoles(AdminConst.ADMIN_NAME)
-    @ResponseBody
-    public Tip setSeller(@RequestParam("userId") Integer userId,
-                         @RequestParam("sellerIds") String sellerIds) {
-        if (ToolUtil.isOneEmpty(userId, sellerIds)) {
-            throw new GunsException(BizExceptionEnum.REQUEST_NULL);
-        }
-        //不处理超级管理员（默认所有）
-        if (userId.equals(AdminConst.ADMIN_ID)) {
-            throw new GunsException(BizExceptionEnum.CANT_CHANGE_ADMIN);
-        }
-        sellerService.setSellerScope(userId, sellerIds);
         return SUCCESS_TIP;
     }
 

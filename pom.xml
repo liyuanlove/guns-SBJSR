@@ -12,8 +12,6 @@
     <!--子模块-->
     <modules>
         <module>jpa-spring-boot</module>
-        <module>redis-spring-boot-cache</module>
-        <module>fastjson-spring-boot</module>
         <module>guns-core-jpa</module>
         <module>guns-generator-jpa</module>
         <module>guns-admin-jpa</module>
@@ -34,6 +32,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <guns.version>1.0.0</guns.version>
+        <tool.jar.version>1.0.0</tool.jar.version>
+
         <mybatisplus-spring-boot-starter.version>1.0.5</mybatisplus-spring-boot-starter.version>
         <mybatis-plus.version>2.3</mybatis-plus.version>
         <shiro.version>1.4.0</shiro.version>
@@ -57,16 +57,10 @@
     <!--依赖管理-->
     <dependencyManagement>
         <dependencies>
-
             <!--guns内部依赖-->
             <dependency>
                 <groupId>org.tc.SBJ</groupId>
                 <artifactId>guns-core-jpa</artifactId>
-                <version>${guns.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.tc.SBJ</groupId>
-                <artifactId>redis-spring-boot-cache</artifactId>
                 <version>${guns.version}</version>
             </dependency>
             <dependency>
@@ -76,13 +70,19 @@
             </dependency>
             <dependency>
                 <groupId>org.tc.SBJ</groupId>
-                <artifactId>fastjson-spring-boot</artifactId>
-                <version>${guns.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.tc.SBJ</groupId>
                 <artifactId>guns-generator-jpa</artifactId>
                 <version>${guns.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.tc.springboot</groupId>
+                <artifactId>redis-cache-spring-boot</artifactId>
+                <version>${tool.jar.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.tc.springboot</groupId>
+                <artifactId>fastjson-spring-boot</artifactId>
+                <version>${tool.jar.version}</version>
             </dependency>
 
             <!--spring-boot全家桶-->

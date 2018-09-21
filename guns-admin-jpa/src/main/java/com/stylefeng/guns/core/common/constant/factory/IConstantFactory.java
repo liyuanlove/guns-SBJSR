@@ -95,15 +95,6 @@ public interface IConstantFactory {
      */
     Object getCrudObject(Object key);
 
-
-    /**
-     * 通过卖家ID获取卖家name
-     *
-     * @param sellerid
-     * @return
-     */
-    String getSellerName(Integer sellerid);
-
     /**
      * 获取通知标题
      */

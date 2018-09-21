@@ -39,7 +39,6 @@ public class ConstantFactory implements IConstantFactory {
     private UserDao userDao = SpringContextHolder.getBean(UserDao.class);
     private MenuDao menuDao = SpringContextHolder.getBean(MenuDao.class);
     private NoticeDao noticeDao = SpringContextHolder.getBean(NoticeDao.class);
-    private SellerDao sellerDao = SpringContextHolder.getBean(SellerDao.class);
     private RedisCacheDao redisCacheDao = SpringContextHolder.getBean(RedisCacheDao.class);
 
     public static IConstantFactory me() {
@@ -208,19 +207,6 @@ public class ConstantFactory implements IConstantFactory {
     @Override
     public Object getCrudObject(Object key) {
         return redisCacheDao.getAndRemove(Cache.CRUD, key);
-    }
-
-    @Override
-    public String getSellerName(Integer sellerid) {
-        if (sellerid == null) {
-            return "--";
-        }
-        try {
-            Seller seller = sellerDao.getOne(sellerid);
-            return seller.getName();
-        } catch (EntityNotFoundException e) {
-            return "";
-        }
     }
 
     @Override
